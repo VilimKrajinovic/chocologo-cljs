@@ -1,34 +1,17 @@
-body {
-  font-family: 'Helvetica Neue', Verdana, Helvetica, Arial, sans-serif;
-  max-width: 600px;
-  margin: 0 auto;
-  padding-top: 72px;
-  -webkit-font-smoothing: antialiased;
-  font-size: 1.125em;
-  color: #333;
-  line-height: 1.5em;
+@font-face {
+  font-family: Riesling;
+  src: url("/static/fonts/riesling.ttf") format('truetype');
 }
 
-h1, h2, h3 {
-  color: #000;
-}
-h1 {
-  font-size: 2.5em
+@font-face {
+  font-family: Raleway;
+  src: url("/static/fonts/raleway.ttf") format('truetype');
 }
 
-h2 {
-  font-size: 2em
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: Raleway;
 }
 
-h3 {
-  font-size: 1.5em
-}
-
-a {
-  text-decoration: none;
-  color: #09f;
-}
-
-a:hover {
-  text-decoration: underline;
-}

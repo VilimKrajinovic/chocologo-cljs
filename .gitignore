@@ -20,3 +20,6 @@ pom.xml.asc
 .lsp
 package-lock.json
 .idea
+.DS_Store
+.calva
+public/.DS_Store
