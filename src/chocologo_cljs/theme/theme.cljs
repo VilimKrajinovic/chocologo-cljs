@@ -3,12 +3,15 @@
 ;; -----------------------
 ;; Header
 
-(def header-color "white");
+(def text-color "white");
+
+(defn typography []
+{:color text-color}  )
 
 (defn header-theme []
   {:font-size "6vw"
-   :color header-color})
+   :color text-color})
 
 (defn header-description-theme []
   {:font-size "1vw"
-   :color header-color})
+   :color text-color})
