@@ -8,10 +8,51 @@
   src: url("/static/fonts/raleway.ttf") format('truetype');
 }
 
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
   margin: 0;
   font-family: Raleway;
 }
 
+.description-wrapper {
+  position: absolute;
+  background: rgba(247, 119, 0, 0.2);
+  color: white;
+  opacity: 0;
+  border-radius: 10px;
+  margin: 0;
+  height: 300px;
+  width: 300px;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+
+div.description-wrapper:hover {
+  opacity: 100%;
+  visibility: visible;
+}
+
+.picture-link {
+  object-fit: cover;
+  border-radius: 10px !important;
+  width: 300px;
+  height: 300px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .picture-link {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .description-wrapper {
+    opacity: 100%;
+    visibility: visible;
+    height: 150px;
+    width: 150px;
+  }
+}

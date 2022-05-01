@@ -4,6 +4,7 @@
    [chocologo-cljs.components.angled-strip :refer [angled-strip]]
    [chocologo-cljs.components.fixed-background :refer [fixed-background]]
    [chocologo-cljs.components.caption :refer [caption]]
+   [chocologo-cljs.components.picutre-link :refer [picture-link]]
    [reitit.frontend :as reitit]
    [reitit.frontend.easy :as rfe]
    [reitit.coercion.spec :as rcs]
@@ -11,6 +12,17 @@
    [spec-tools.data-spec :as ds]
    [reagent.core :as r]
    [reagent.dom :as d]))
+
+;; -------------------------
+;; Helpers
+(defn container [& children]
+  [:div.container {:style {:padding-top "30vh", :width "80vw"} :md "auto" :xs "auto" :sm "auto"} children])
+
+(defn col [& children]
+  [:div.col {:style {:float "none", :margin "0 auto"}} children])
+
+(defn row [& children]
+  [:div.row.justify-content-center.text-center children])
 
 ;; -------------------------
 ;; Views
@@ -23,7 +35,16 @@
    [angled-strip "How do we make them?" "Chocologo chocolates are made by hand in combination with modern 3D technology.\nThe final product is wholy made without use of artificial coloring\nWe use high quality Italian milk and dark chocolate in combination with white chocolate."]
    [fixed-background "/static/chocolate-background.jpg" [caption "Perfect gift for every occassion"]]
    [angled-strip "Our Products" ""]
-   [fixed-background "/static/chocolate-background.jpg" ]])
+   [fixed-background "/static/chocolate-background.jpg"
+    [container
+     [row
+      [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
+      [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
+      [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]]
+     [row
+      [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
+      [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
+      [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]]]]])
 
 (defn birthdays []
   [:div [:h1 "This is the birthdays page"]])
