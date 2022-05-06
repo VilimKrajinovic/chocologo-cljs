@@ -18,6 +18,7 @@
                  :left "0"
                  :z-index "-1"}}])
 
+#_{:clj-kondo/ignore [:unresolved-symbol]}
 (defmedia --responsive-header
   [nil
    "@media (max-width: 768px)"]
@@ -25,6 +26,7 @@
   [{:font-size (:font-size (header-theme))}
    {:font-size (:font-size-responsive (header-theme))}])
 
+#_{:clj-kondo/ignore [:unresolved-symbol]}
 (defmedia --responsive-description
   [nil
    "@media (max-width: 768px)"]
@@ -32,12 +34,14 @@
   [{:font-size (:font-size (header-description-theme))}
    {:font-size (:font-size-responsive (header-description-theme))}])
 
+#_{:clj-kondo/ignore [:unresolved-symbol]}
 (defstyled button [:a {:wrap r/adapt-react-class}]
   {:z-index "1"
    :&:hover {:color (:color (header-theme))}
    :color (:color (header-theme))
    :text-decoration :none})
 
+#_{:clj-kondo/ignore [:unresolved-symbol]}
 (defstyled header [:h1 {:wrap r/adapt-react-class}]
   {:grid-area "2/1/2/3"
    :align-self "center"
@@ -49,6 +53,7 @@
    :font-weight "normal"
    :text-shadow "0 2px 4px rgba(0,0,0,0.4)"} --responsive-header)
 
+#_{:clj-kondo/ignore [:unresolved-symbol]}
 (defstyled description [:p {:wrap r/adapt-react-class}]
   {:font-size (:font-size (header-description-theme))
    :font-weight "normal"
@@ -59,12 +64,14 @@
    :margin "3vh 0 0 0"
    :z-index "0"} --responsive-description)
 
+#_{:clj-kondo/ignore [:unresolved-symbol]}
 (defmedia --header-div-responsive
   [nil
    "@media (max-width: 400px)"]
   [{:height "100vh"}
    {:height "125vh"}])
 
+#_{:clj-kondo/ignore [:unresolved-symbol]}
 (defstyled header-div [:div {:wrap r/adapt-react-class}]
   {:width "100%"
    :position "relative"
@@ -72,6 +79,7 @@
    :grid-template-rows "max-content 1fr"
    :grid-template-columns "1fr max-content"} --header-div-responsive)
 
+#_{:clj-kondo/ignore [:unresolved-symbol]}
 (defn main-header []
   [header-div
    [navigation]

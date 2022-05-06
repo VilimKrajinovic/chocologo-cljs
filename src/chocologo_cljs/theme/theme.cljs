@@ -21,7 +21,7 @@
    :color text-color})
 
 (defn picture-links-theme []
-  {:width picture-link-size 
-  :width-responsive picture-link-responsive-size
+  {:width picture-link-size
+   :width-responsive picture-link-responsive-size
    :height picture-link-size
    :height-responsive picture-link-responsive-size})
