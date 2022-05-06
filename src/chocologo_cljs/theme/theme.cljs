@@ -11,10 +11,12 @@
 
 (defn header-theme []
   {:font-size "6vw"
+   :font-size-responsive "15vw"
    :color text-color})
 
 (defn header-description-theme []
   {:font-size "1vw"
+   :font-size-responsive "3vw"
    :color text-color})
 
 (defn picture-links-theme []

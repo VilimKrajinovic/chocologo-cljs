@@ -1,6 +1,7 @@
 {:source-paths ["src"]
  :dependencies [[binaryage/devtools "1.0.3"]
                 [metosin/reitit "0.5.18"]
+                [emotion-cljs "0.1.5"]
                 [nrepl "0.8.3"]
                 [reagent "1.1.1"]]
  :builds       {:app {:target     :browser

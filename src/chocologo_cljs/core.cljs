@@ -6,7 +6,6 @@
    [chocologo-cljs.components.caption :refer [caption]]
    [chocologo-cljs.components.picutre-link :refer [picture-link]]
    [chocologo-cljs.service.i18n :refer [t]]
-   [cljs.pprint :refer [pprint]]
    [reitit.frontend :as reitit]
    [reitit.frontend.easy :as rfe]
    [reitit.coercion.spec :as rcs]
@@ -37,10 +36,10 @@
 (defn home []
   [:<>
    [angled-strip (t :title) (t :title-description)]
-   [fixed-background "/static/chocolate-background.jpg" [caption "Your logo on our chocolates..."]]
-   [angled-strip "How do we make them?" "Chocologo chocolates are made by hand in combination with modern 3D technology.\nThe final product is wholy made without use of artificial coloring\nWe use high quality Italian milk and dark chocolate in combination with white chocolate."]
-   [fixed-background "/static/chocolate-background.jpg" [caption "Perfect gift for every occassion"]]
-   [angled-strip "Our Products" ""]
+   [fixed-background "/static/chocolate-background.jpg" [caption (t :bubble-first)]]
+   [angled-strip (t :title-second) (t :title-second-description)]
+   [fixed-background "/static/chocolate-background.jpg" [caption (t :bubble-second)]]
+   [angled-strip (t :title-third) nil]
    [fixed-background "/static/chocolate-background.jpg" "auto"
     [container
      [row
