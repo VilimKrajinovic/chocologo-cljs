@@ -1,6 +1,7 @@
 (ns chocologo-cljs.components.header
   (:require [reagent.core :as r]
-            [chocologo-cljs.theme.theme :refer [header-theme header-description-theme]]))
+            [chocologo-cljs.theme.theme :refer [header-theme header-description-theme]]
+            [chocologo-cljs.components.navigation :refer [navigation]]))
 
 (defn background-image [img]
   [:div {:style {:width "100%"
@@ -49,6 +50,7 @@
                  :display "grid"
                  :grid-template-rows "max-content 1fr"
                  :grid-template-columns "1fr max-content"}}
+   [navigation]
    [background-image "/static/chocolate-background.jpg"]
    [header]
    [description]])

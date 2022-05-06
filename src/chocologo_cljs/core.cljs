@@ -5,6 +5,8 @@
    [chocologo-cljs.components.fixed-background :refer [fixed-background]]
    [chocologo-cljs.components.caption :refer [caption]]
    [chocologo-cljs.components.picutre-link :refer [picture-link]]
+   [chocologo-cljs.service.i18n :refer [t]]
+   [cljs.pprint :refer [pprint]]
    [reitit.frontend :as reitit]
    [reitit.frontend.easy :as rfe]
    [reitit.coercion.spec :as rcs]
@@ -16,7 +18,11 @@
 ;; -------------------------
 ;; Helpers
 (defn container [& children]
-  [:div.container {:style {:padding-top "30vh", :width "80vw"} :md "auto" :xs "auto" :sm "auto"} children])
+  [:div.container {:style {:padding-top "30vh"
+                           :width "80vw"}
+                   :md "auto"
+                   :xs "auto"
+                   :sm "auto"} children])
 
 (defn col [& children]
   [:div.col {:style {:float "none", :margin "0 auto"}} children])
@@ -30,18 +36,17 @@
 
 (defn home []
   [:<>
-   [angled-strip "Who we are?" "We are a small chocolate company located in Zagreb, Croatia\nOur chocolates are made with the finest Belgian ingredients and melted on perfect temperatures\nDecorated with your own personalized photos and logos."]
+   [angled-strip (t :title) (t :title-description)]
    [fixed-background "/static/chocolate-background.jpg" [caption "Your logo on our chocolates..."]]
    [angled-strip "How do we make them?" "Chocologo chocolates are made by hand in combination with modern 3D technology.\nThe final product is wholy made without use of artificial coloring\nWe use high quality Italian milk and dark chocolate in combination with white chocolate."]
    [fixed-background "/static/chocolate-background.jpg" [caption "Perfect gift for every occassion"]]
    [angled-strip "Our Products" ""]
-   [fixed-background "/static/chocolate-background.jpg"
+   [fixed-background "/static/chocolate-background.jpg" "auto"
     [container
      [row
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
-      [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]]
-     [row
+      [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]]]]])
