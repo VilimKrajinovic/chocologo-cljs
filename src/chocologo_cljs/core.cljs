@@ -25,7 +25,7 @@
                    :sm "auto"} children])
 
 (defn col [& children]
-  [:div.col {:style {:float "none", :margin "10px auto"}} children])
+  [:div.col {:style {:float "none", :margin "0 auto"}} children])
 
 (defn row [& children]
   [:div.row.justify-content-center.text-center children])
@@ -37,9 +37,9 @@
 (defn home []
   [:<>
    [angled-strip (t :title) (t :title-description)]
-   [fixed-background "/static/chocolate-background.jpg" [caption (t :bubble-first)]]
+   [fixed-background "/static/first.jpg" [caption (t :bubble-first)]]
    [angled-strip (t :title-second) (t :title-second-description)]
-   [fixed-background "/static/chocolate-background.jpg" [caption (t :bubble-second)]]
+   [fixed-background "/static/chocolate1.jpeg" [caption (t :bubble-second)]]
    [angled-strip (t :title-third) nil]
    [fixed-background "/static/chocolate-background.jpg" "auto"
     [container

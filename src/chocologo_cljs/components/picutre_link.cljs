@@ -3,7 +3,6 @@
             [reagent.core :as r]
             [emotion.core :refer [defstyled defmedia]]))
 
-
 (defmedia --responsive-div-wrapper
   [nil
    "@media(min-width: 200px) and (max-width: 480px)"]

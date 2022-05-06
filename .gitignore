@@ -16,7 +16,7 @@ pom.xml.asc
 /.env
 /node_modules
 .shadow-cljs
-.clj-kondo
+.clj-kondo/.cache
 .lsp
 package-lock.json
 .idea
