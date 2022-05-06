@@ -10,6 +10,7 @@
   [{:height (:height (picture-links-theme))
     :width (:width (picture-links-theme))}
    {:height (:height-responsive (picture-links-theme))
+    :margin "10px auto"
     :width (:width-responsive (picture-links-theme))}])
 
 (defmedia --responsive-description-wrapper

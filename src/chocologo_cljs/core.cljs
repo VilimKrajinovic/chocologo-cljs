@@ -25,7 +25,7 @@
                    :sm "auto"} children])
 
 (defn col [& children]
-  [:div.col {:style {:float "none", :margin "0 auto"}} children])
+  [:div.col {:style {:float "none", :margin "10px auto"}} children])
 
 (defn row [& children]
   [:div.row.justify-content-center.text-center children])
