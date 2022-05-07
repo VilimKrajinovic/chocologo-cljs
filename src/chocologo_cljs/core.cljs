@@ -19,17 +19,17 @@
 ;; Helpers
 
 (defn container [& children]
-  [:div.container {:style {:padding-top "30vh"
-                           :width "80vw"}
-                   :md "auto"
-                   :xs "auto"
-                   :sm "auto"} children])
+  (into [:div.container {:style {:padding-top "30vh"
+                                 :width "80vw"}
+                         :md "auto"
+                         :xs "auto"
+                         :sm "auto"}] children))
 
 (defn col [& children]
-  [:div.col {:style {:float "none", :margin "0 auto"}} children])
+  (into [:div.col {:style {:float "none", :margin "0 auto"}}] children))
 
 (defn row [& children]
-  [:div.row.justify-content-center.text-center children])
+  (into [:div.row.justify-content-center.text-center] children))
 
 ;; -------------------------
 ;; Views
@@ -64,7 +64,7 @@
 (def routes [["/" {:name ::frontpage
                    :view home}]
              ["/rectangular" {:name ::rectangular
-                            :view rectangular-view}]])
+                              :view rectangular-view}]])
 
 ;; -------------------------
 ;; Initialize app
