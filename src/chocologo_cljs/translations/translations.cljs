@@ -9,6 +9,8 @@
         :title-third-description "Below is a list of our products grouped by chocolate shape/weight"
         :bubble-first "Your logo on our chocolates"
         :bubble-second "Perfect gift for every occassion"
+        :products-rectangular-title "Rectangular chocolates"
+        :products-rectangular-description "Chocolate with the dimensions of 25mmx45mm"
         :language-english "English"
         :language-croatian "Croatian"
         :language-change "Change language:"}
@@ -20,6 +22,8 @@
         :title-second-description "Chocologo čokolade nastaju ručnim radom u kombinaciji s modernom 3D tehnologijom.\nProizvod je u potpunosti izrađen od čokolade, bez dodanih umjetnih boja.\nU izradi naših proizvoda koristimo kvalitetnu talijansku čokoladu, mliječnu i tamnu u kombinaciji s bijelom.te chocolate."
         :title-third "Naši proizvodi:"
         :title-third-description "Ispod se nalaze naši proizvodi grupirani prema obliku čokolade"
+        :products-rectangular-title "Pravokutna čokolada"
+        :products-rectangular-description "Čokolada dimenzija 25x45 milimetara"
         :bubble-first "Vaš logo na našim čokoladama"
         :bubble-second "Dar za svaku prigodu"
         :language-english "English"

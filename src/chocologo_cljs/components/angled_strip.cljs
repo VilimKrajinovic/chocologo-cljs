@@ -28,6 +28,7 @@
 (defn description [text]
   [:p {:style {:white-space "pre-wrap"
                :color (:color typography)
+               :font-size (:font-size typography)
                :margin "2% auto 5rem"
                :width "80%"}} text])
 

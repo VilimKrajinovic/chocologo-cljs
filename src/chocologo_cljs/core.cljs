@@ -5,6 +5,7 @@
    [chocologo-cljs.components.fixed-background :refer [fixed-background]]
    [chocologo-cljs.components.caption :refer [caption]]
    [chocologo-cljs.components.picutre-link :refer [picture-link]]
+   [chocologo-cljs.components.gallery :refer [gallery]]
    [chocologo-cljs.service.i18n :refer [t]]
    [reitit.frontend :as reitit]
    [reitit.frontend.easy :as rfe]
@@ -44,26 +45,26 @@
    [fixed-background "/static/brown-gradient.jpeg" "auto"
     [container
      [row
-      [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
+      [col [picture-link "25x45mm rectangular chocolate" "/rectangular" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]]]]])
 
-(defn birthdays []
+(defn rectangular-view []
   [:<>
-   [angled-strip (t :products-birthdays-title) (t :products-birthdays-description)]
-   [fixed-background "/static/brown-gradient.jpeg" "100vh"
-    [caption (t :products-birthdays-caption)]]])
+   [angled-strip (t :products-rectangular-title) (t :products-rectangular-description)]
+   [fixed-background "/static/brown-gradient.jpeg" "auto"
+    [gallery :rectangular 3]]])
 
 ;; -------------------------
 ;; Routes
 
 (def routes [["/" {:name ::frontpage
                    :view home}]
-             ["/birthdays" {:name ::birthdays
-                            :view birthdays}]])
+             ["/rectangular" {:name ::rectangular
+                            :view rectangular-view}]])
 
 ;; -------------------------
 ;; Initialize app

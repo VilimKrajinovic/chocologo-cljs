@@ -49,6 +49,7 @@
 (defstyled description [:div {:wrap r/adapt-react-class}]
   {:font-size "2rem"
    :position "relative"
+   :text-shadow "2px 2px 1px rgba(0,0,0,0.9)"
    :top "50%"
    :transform "translateY(-50%)"})
 
