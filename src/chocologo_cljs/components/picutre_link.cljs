@@ -7,21 +7,21 @@
 (defmedia --responsive-div-wrapper
   [nil
    "@media(min-width: 200px) and (max-width: 480px)"]
-  [{:height (:height (picture-links-theme))
-    :width (:width (picture-links-theme))}
-   {:height (:height-responsive (picture-links-theme))
+  [{:height (:height picture-links-theme)
+    :width (:width picture-links-theme)}
+   {:height (:height-responsive picture-links-theme)
     :margin "10px auto"
-    :width (:width-responsive (picture-links-theme))}])
+    :width (:width-responsive picture-links-theme)}])
 
 (defmedia --responsive-description-wrapper
   [nil
    "@media(min-width: 200px) and (max-width: 480px)"]
-  [{:height (:height (picture-links-theme))
-    :width (:width (picture-links-theme))
+  [{:height (:height picture-links-theme)
+    :width (:width picture-links-theme)
     :opacity "0%"
     :visibility "invisible"}
-   {:height (:height-responsive (picture-links-theme))
-    :width (:width-responsive (picture-links-theme))
+   {:height (:height-responsive picture-links-theme)
+    :width (:width-responsive picture-links-theme)
     :opacity "100%"
     :visibility "visible"}])
 

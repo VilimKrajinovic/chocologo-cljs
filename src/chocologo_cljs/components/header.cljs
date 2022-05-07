@@ -22,20 +22,20 @@
   [nil
    "@media (max-width: 768px)"]
   {}
-  [{:font-size (:font-size (header-theme))}
-   {:font-size (:font-size-responsive (header-theme))}])
+  [{:font-size (:font-size header-theme)}
+   {:font-size (:font-size-responsive header-theme)}])
 
 (defmedia --responsive-description
   [nil
    "@media (max-width: 768px)"]
   {}
-  [{:font-size (:font-size (header-description-theme))}
-   {:font-size (:font-size-responsive (header-description-theme))}])
+  [{:font-size (:font-size header-description-theme)}
+   {:font-size (:font-size-responsive header-description-theme)}])
 
 (defstyled button [:a {:wrap r/adapt-react-class}]
   {:z-index "1"
-   :&:hover {:color (:color (header-theme))}
-   :color (:color (header-theme))
+   :&:hover {:color (:color header-theme)}
+   :color (:color header-theme)
    :text-decoration :none})
 
 (defstyled header [:h1 {:wrap r/adapt-react-class}]
@@ -43,18 +43,18 @@
    :align-self "center"
    :justify-self "center"
    :margin "-5rem 0 0"
-   :color (:color (header-theme))
-   :font-size (:font-size (header-theme))
+   :color (:color header-theme)
+   :font-size (:font-size header-theme)
    :font-family "Riesling, sans-serif"
    :font-weight "normal"
    :text-shadow "0 2px 4px rgba(0,0,0,0.4)"} --responsive-header)
 
 (defstyled description [:p {:wrap r/adapt-react-class}]
-  {:font-size (:font-size (header-description-theme))
+  {:font-size (:font-size header-description-theme)
    :font-weight "normal"
    :align-self "center"
    :justify-self "center"
-   :color (:color (header-description-theme))
+   :color (:color header-description-theme)
    :grid-area "2/1/2/3"
    :margin "3vh 0 0 0"
    :z-index "0"} --responsive-description)

@@ -7,20 +7,20 @@
 (def picture-link-size "300px")
 (def picture-link-responsive-size "200px")
 
-(defn typography []
+(def typography 
   {:color text-color})
 
-(defn header-theme []
+(def header-theme 
   {:font-size "6vw"
    :font-size-responsive "15vw"
    :color text-color})
 
-(defn header-description-theme []
+(def header-description-theme 
   {:font-size "1vw"
    :font-size-responsive "3vw"
    :color text-color})
 
-(defn picture-links-theme []
+(def picture-links-theme 
   {:width picture-link-size
    :width-responsive picture-link-responsive-size
    :height picture-link-size

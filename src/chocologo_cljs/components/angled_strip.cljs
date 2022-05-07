@@ -22,13 +22,13 @@
 
 (defn title [text]
   [:h2 {:style {:font-weight "normal"
-                :color (:color (typography))
+                :color (:color typography)
                 :margin "0"}} text])
 
 (defn description [text]
   [:p {:style {:white-space "pre-wrap"
-               :color (:color (typography))
-               :margin "5% auto 5rem"
+               :color (:color typography)
+               :margin "2% auto 5rem"
                :width "80%"}} text])
 
 (defn content [title-text, description-text]

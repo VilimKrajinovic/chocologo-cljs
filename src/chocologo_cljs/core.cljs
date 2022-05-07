@@ -40,8 +40,8 @@
    [fixed-background "/static/first.jpg" [caption (t :bubble-first)]]
    [angled-strip (t :title-second) (t :title-second-description)]
    [fixed-background "/static/chocolate1.jpeg" [caption (t :bubble-second)]]
-   [angled-strip (t :title-third) nil]
-   [fixed-background "/static/chocolate-background.jpg" "auto"
+   [angled-strip (t :title-third) (t :title-third-description)]
+   [fixed-background "/static/brown-gradient.jpeg" "auto"
     [container
      [row
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
@@ -52,7 +52,10 @@
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]]]]])
 
 (defn birthdays []
-  [:div [:h1 "This is the birthdays page"]])
+  [:<>
+   [angled-strip (t :products-birthdays-title) (t :products-birthdays-description)]
+   [fixed-background "/static/brown-gradient.jpeg" "100vh"
+    [caption (t :products-birthdays-caption)]]])
 
 ;; -------------------------
 ;; Routes

@@ -13,7 +13,7 @@
                  :height "auto"
                  :padding "10px"}}
    [:span {:style {:text-align "center";
-                   :color (:color (typography));
+                   :color (:color typography);
                    :width "100%";
                    :font-family "Lato, sans-serif";
                    :text-transform "uppercase";
