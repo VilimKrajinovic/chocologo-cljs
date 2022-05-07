@@ -17,6 +17,7 @@ pom.xml.asc
 /node_modules
 .shadow-cljs
 .clj-kondo/.cache
+.clj-kondo/metosin/malli
 .lsp
 package-lock.json
 .idea

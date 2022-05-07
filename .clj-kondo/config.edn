@@ -1,0 +1,5 @@
+{:lint-as {emotion.core/defmedia clj-kondo.lint-as/def-catch-all
+           emotion.core/defstyled clj-kondo.lint-as/def-catch-all}
+ :linters
+ {:unused-namespace {:level :warning}
+  :unresolved-symbol {:exclude [emotion.core]}}}
