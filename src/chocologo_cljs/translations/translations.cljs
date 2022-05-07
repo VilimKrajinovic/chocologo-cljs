@@ -1,6 +1,6 @@
 (ns chocologo-cljs.translations.translations)
 
-(defn translations []
+(def translations 
   {:en {:title "Who we are?"
         :title-description "We are a small chocolate company located in Zagreb, Croatia\nOur chocolates are made with the finest Belgian ingredients and melted on perfect temperatures\nDecorated with your own personalized photos and logos."
         :title-second "How do we make them?"
@@ -11,8 +11,10 @@
         :language-english "English"
         :language-croatian "Croatian"
         :language-change "Change language:"}
+
+
    :hr {:title "Tko smo mi?"
-        :title-description "Chocologo je mala obiteljska tvrtka iz Zagreba koja se bavi izradom personaliziranih čokolada.\nIzrađujemo ih od najfinije talijanske čokolade, a ljubav i pažnja koje ulažemo u izradu svake posebni su sastojci koji ih čine još slađima!\nRučno izrađene te ukrašene Vašim porukama, slikama i logotipima, naše čokolade svakome omogućuju da bude originalan i da iskaže pažnju na poseban način."
+        :title-description "Chocologo je mala obiteljska tvrtka iz Zagreba koja se bavi izradom personaliziranih čokolada.\nIzrađujemo ih od najfinije belgijske čokolade, a ljubav i pažnja koje ulažemo u izradu svake posebni su sastojci koji ih čine još slađima!\nRučno izrađene te ukrašene Vašim porukama, slikama i logotipima, naše čokolade svakome omogućuju da bude originalan i da iskaže pažnju na poseban način."
         :title-second "Kako ih izrađujemo?"
         :title-second-description "Chocologo čokolade nastaju ručnim radom u kombinaciji s modernom 3D tehnologijom.\nProizvod je u potpunosti izrađen od čokolade, bez dodanih umjetnih boja.\nU izradi naših proizvoda koristimo kvalitetnu talijansku čokoladu, mliječnu i tamnu u kombinaciji s bijelom.te chocolate."
         :title-third "Naši proizvodi:"

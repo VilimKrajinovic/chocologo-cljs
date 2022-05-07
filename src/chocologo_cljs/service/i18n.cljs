@@ -11,5 +11,5 @@
       result)))
 
 (defn t [keyword] (case @locale
-                    "en" (find-translation (get (translations) :en) keyword)
-                    "hr" (find-translation (get (translations) :hr) keyword)))
+                    "en" (find-translation (get translations :en) keyword)
+                    "hr" (find-translation (get translations :hr) keyword)))
