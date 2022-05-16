@@ -1,5 +1,5 @@
 (ns chocologo-cljs.components.caption
-(:require [chocologo-cljs.theme.theme :refer [typography]])  )
+  (:require [chocologo-cljs.theme.theme :refer [typography]]))
 
 (defn rounded-box [caption]
   [:div {:style {:border-radius "20px"
@@ -18,7 +18,7 @@
                    :font-family "Lato, sans-serif";
                    :text-transform "uppercase";
                    :font-size "25px";        
-                   }} caption]])
+                   }}caption]])
 
 (defn caption [text]
   [:div {:style {:position "absolute"
