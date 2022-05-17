@@ -26,7 +26,10 @@
                          :sm "auto"}] children))
 
 (defn col [& children]
-  (into [:div.col {:style {:float "none", :margin "0 auto"}}] children))
+  (into [:div.col {:style {:margin "0 auto"
+                           :justify-content "center"
+                           :align-items "center"
+                           :display "flex"}}] children))
 
 (defn row [& children]
   (into [:div.row.justify-content-center.text-center] children))
@@ -45,7 +48,7 @@
    [fixed-background "/static/brown-gradient.jpeg" "auto"
     [container
      [row
-      [col [picture-link "25x45mm rectangular chocolate" "/rectangular" "/static/chocolate1.jpeg"]]
+      [col [picture-link (t :products-rectangular-caption) "/rectangular" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
@@ -56,7 +59,7 @@
   [:<>
    [angled-strip (t :products-rectangular-title) (t :products-rectangular-description)]
    [fixed-background "/static/brown-gradient.jpeg" "auto"
-    [gallery :rectangular 3]]])
+    [gallery :rectangular 4]]])
 
 ;; -------------------------
 ;; Routes

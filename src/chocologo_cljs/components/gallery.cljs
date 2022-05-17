@@ -32,7 +32,7 @@
   [:div.col {:md "auto" :sm "auto" :xs "auto"} children])
 
 (defn gallery [folder-key count]
-  [:div {:style {:padding-top "30vh"}}
+  [:div {:style {:padding-top "30vh" :justify-content "center"}}
    [row
     (for [img-src (get-file-names folder-key count)]
       ^{:key img-src}[col ^{:key img-src}[gallery-img {:src img-src}]])]])
