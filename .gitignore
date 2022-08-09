@@ -24,3 +24,4 @@ package-lock.json
 .DS_Store
 .calva
 public/.DS_Store
+/projectFilesBackup
