@@ -6,7 +6,7 @@
    [chocologo-cljs.components.caption :refer [caption]]
    [chocologo-cljs.components.picutre-link :refer [picture-link]]
    [chocologo-cljs.components.gallery :refer [gallery]]
-   [chocologo-cljs.service.i18n :refer [t]]
+   [chocologo-cljs.service.i18n :refer [get-translations]]
    [reitit.frontend :as reitit]
    [reitit.frontend.easy :as rfe]
    [reitit.coercion.spec :as rcs]
@@ -40,15 +40,15 @@
 
 (defn home []
   [:<>
-   [angled-strip (t :title) (t :title-description)]
-   [fixed-background "/static/first.jpg" [caption (t :bubble-first)]]
-   [angled-strip (t :title-second) (t :title-second-description)]
-   [fixed-background "/static/chocolate1.jpeg" [caption (t :bubble-second)]]
-   [angled-strip (t :title-third) (t :title-third-description)]
-   [fixed-background "/static/brown-gradient.jpeg" "auto"
+   [angled-strip (:title (get-translations)) (:title-description (get-translations))]
+   [fixed-background "/static/first.jpg" [caption (:bubble-first (get-translations))]]
+   [angled-strip (:title-second (get-translations)) (:title-second-description (get-translations))]
+   [fixed-background "/static/chocolate1.jpeg" [caption (:bubble-second (get-translations))]]
+   [angled-strip (:title-third (get-translations)) (:title-third-description (get-translations))]
+   [fixed-background {:height "auto"} "/static/brown-gradient.jpeg"
     [container
      [row
-      [col [picture-link (t :products-rectangular-caption) "/rectangular" "/static/chocolate1.jpeg"]]
+      [col [picture-link (:products-rectangular-caption (get-translations)) "/rectangular" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
       [col [picture-link "Description" "/birthdays" "/static/chocolate1.jpeg"]]
@@ -57,8 +57,8 @@
 
 (defn rectangular-view []
   [:<>
-   [angled-strip (t :products-rectangular-title) (t :products-rectangular-description)]
-   [fixed-background "/static/brown-gradient.jpeg" "auto"
+   [angled-strip (:products-rectangular-title (get-translations)) (:products-rectangular-description (get-translations))]
+   [fixed-background {:height "auto"} "/static/brown-gradient.jpeg"
     [gallery :rectangular 4]]])
 
 ;; -------------------------

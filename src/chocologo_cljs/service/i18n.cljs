@@ -1,5 +1,5 @@
 (ns chocologo-cljs.service.i18n
-  [:require [chocologo-cljs.translations.translations :refer [translations]]
+  [:require [chocologo-cljs.translations.translations :refer [locale->translations]]
    [reagent.core :as r]])
 
 (def locale (r/atom "en"))
@@ -10,6 +10,6 @@
       (name keyword)
       result)))
 
-(defn t [keyword] (case @locale
-                    "en" (find-translation (get translations :en) keyword)
-                    "hr" (find-translation (get translations :hr) keyword)))
+(defn get-translations [] (case @locale
+                    "en"  (get locale->translations :en) 
+                    "hr"  (get locale->translations :hr))) 

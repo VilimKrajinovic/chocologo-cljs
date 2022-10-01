@@ -7,8 +7,6 @@
  :builds       {:app {:target     :browser
                       :output-dir "public/js"
                       :asset-path "/js"
-                      :modules    {:app {:entries [chocologo-cljs.core]}}
-                      :devtools   {:after-load chocologo-cljs.core/mount-root}}}
+                      :modules    {:app {:entries [chocologo-cljs.core]}}}}
 
- :dev-http     {3000 {:root    "public"
-                      :handler user/app}}}
+ :dev-http     {3000 {:root    "public"}}}

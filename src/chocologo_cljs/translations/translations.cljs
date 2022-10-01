@@ -1,6 +1,6 @@
 (ns chocologo-cljs.translations.translations)
 
-(def translations 
+(def locale->translations 
   {:en {:title "Who we are?"
         :title-description "We are a small chocolate company located in Zagreb, Croatia\nOur chocolates are made with the finest Belgian ingredients and melted on perfect temperatures\nDecorated with your own personalized photos and logos."
         :title-second "How do we make them?"

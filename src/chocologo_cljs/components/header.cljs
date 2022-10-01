@@ -2,7 +2,8 @@
   (:require [reagent.core :as r]
             [emotion.core :refer [defmedia defstyled]]
             [chocologo-cljs.theme.theme :refer [header-theme header-description-theme]]
-            [chocologo-cljs.components.navigation :refer [navigation]]))
+            [chocologo-cljs.components.navigation :refer [navigation]]
+            ["react-awesome-reveal" :refer [Fade]]))
 
 (defn background-image [img]
   [:div {:style {:width "100%"
@@ -55,8 +56,6 @@
    :align-self "center"
    :justify-self "center"
    :color (:color header-description-theme)
-   :grid-area "2/1/2/3"
-   :margin "3vh 0 0 0"
    :z-index "0"} --responsive-description)
 
 (defmedia --header-div-responsive
@@ -68,13 +67,20 @@
 (defstyled header-div [:div {:wrap r/adapt-react-class}]
   {:width "100%"
    :position "relative"
-   :display "grid"
-   :grid-template-rows "max-content 1fr"
-   :grid-template-columns "1fr max-content"} --header-div-responsive)
+   :display "flex"
+   :flex-direction "column"
+   :align-items "center"
+   :align-content "center"
+   :justify-content "center"
+   :justify-items "center"} --header-div-responsive)
 
 (defn main-header []
   [header-div
    [navigation]
    [background-image "/static/chocolate-background.jpg"]
-   [header [button {:href "/"} "Chocologo"]]
-   [description "Vaša najslađa poruka"]])
+   [header 
+    [(r/adapt-react-class Fade) {:direction "up" :duration 1000 :triggerOnce true}
+            [button {:href "/"} "Chocologo"]]]
+   [:div {:style {:transform "translateY(-1rem)"}}
+    [(r/adapt-react-class Fade) {:direction "up" :delay 1000 :duration 1000 :triggerOnce true}
+     [description "Vaša najslađa poruka"]]]])
